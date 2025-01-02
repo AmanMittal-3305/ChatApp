@@ -9,6 +9,8 @@ import {
   Users,
 } from "phosphor-react";
 
+const avatarUrl = () => `https://i.pravatar.cc/300?u=${Math.random()}`; // Fallback solution for generating avatar URLs
+
 const Profile_Menu = [
   {
     title: "Profile",
@@ -19,7 +21,7 @@ const Profile_Menu = [
     icon: <Gear />,
   },
   {
-    title: "Profile",
+    title: "Logout",
     icon: <SignOut />,
   },
 ];
@@ -49,7 +51,7 @@ const Nav_Setting = [
 const ChatList = [
   {
     id: 0,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "9:36",
@@ -59,7 +61,7 @@ const ChatList = [
   },
   {
     id: 1,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "12:02",
@@ -69,7 +71,7 @@ const ChatList = [
   },
   {
     id: 2,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "10:35",
@@ -79,7 +81,7 @@ const ChatList = [
   },
   {
     id: 3,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "04:00",
@@ -89,7 +91,7 @@ const ChatList = [
   },
   {
     id: 4,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "08:42",
@@ -99,7 +101,7 @@ const ChatList = [
   },
   {
     id: 5,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "08:42",
@@ -109,7 +111,7 @@ const ChatList = [
   },
   {
     id: 6,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "08:42",
@@ -119,7 +121,7 @@ const ChatList = [
   },
   {
     id: 7,
-    img: faker.image.avatar(),
+    img: avatarUrl(),
     name: faker.name.firstName(),
     msg: faker.music.songName(),
     time: "08:42",
@@ -158,12 +160,11 @@ const Chat_History = [
     incoming: true,
     outgoing: false,
   },
-
   {
     type: "msg",
     subtype: "img",
     message: "Here You Go",
-    img: faker.image.abstract(),
+    img: avatarUrl(),
     incoming: true,
     outgoing: false,
   },
@@ -173,7 +174,6 @@ const Chat_History = [
     incoming: false,
     outgoing: true,
   },
-
   {
     type: "msg",
     subtype: "doc",
@@ -184,7 +184,7 @@ const Chat_History = [
   {
     type: "msg",
     subtype: "link",
-    preview: faker.image.cats(),
+    preview: avatarUrl(),
     message: "Yep, I can also do that",
     incoming: true,
     outgoing: false,
