@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import { connectDB } from './lib/db.js';
 import cookieParser from 'cookie-parser';
 
-dotenv.config(); // Load .env variables before using them
+dotenv.config(); 
 
 const app = express();
 app.use(cookieParser());
